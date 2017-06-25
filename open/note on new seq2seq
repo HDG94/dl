@@ -1,0 +1,17 @@
+## Member functions: 
+
+1. tf.contrib.seq2seq.attention_decoder_fn_train(encoder_state, attention_keys, attention_values, attention_score_fn, attention_construct_fn, name=None)
+
+2. tf.contrib.seq2seq.attention_decoder_fn_train(encoder_state, attention_keys, attention_values, attention_score_fn, attention_construct_fn, name=None)
+
+3. tf.contrib.seq2seq.dynamic_rnn_decoder(cell, decoder_fn, inputs=None, sequence_length=None, parallel_iterations=None, swap_memory=False, time_major=False, scope=None, name=None)
+
+4. tf.contrib.seq2seq.prepare_attention(attention_states, attention_option, num_units, reuse=False)
+
+# Explained:
+Args: attention_states = Fmatrix (size [BS, max_time, num_units]), attention_option = 'bahdanau', num_units = DIM_WordEmbedding, reuse: whether to reuse variable scope
+Returns: attention_keys (TB compared with target states), attention_values (to construct context vectors)
+
+Note: Fmatrix may need transposition to the required dimension
+
+5. tf.contrib.seq2seq.sequence_loss(logits, targets, weights, average_across_timesteps=True, average_across_batch=True, softmax_loss_function=None, name=None)
